@@ -1,0 +1,113 @@
+/* VideoPlayer.css */
+
+.video-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .video-wrapper {
+    position: relative;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: -7em;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .controls button,
+  .controls select {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .playlist {
+    max-height: calc(100vh - 100px); /* Adjusted max-height for the playlist */
+    overflow-y: auto;
+  }
+  
+  .playlist ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .playlist li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .playlist img {
+    width: 74%;
+    height: 3%;
+    margin-right: 10px;
+  }
+  
+  .playlist span {
+    font-size: 14px;
+  }
+  
+  /* Responsive styles */
+
+  @media (max-width: 1023px) {
+    .video-container {
+      grid-template-columns: 60% 40%;
+    }
+    .playlist img {
+        width: 44%;
+        height: 3%;
+        margin-right: 10px;
+      }
+      .controls {
+        position: absolute;
+        bottom: -3em;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+
+  @media (max-width: 1024px) {
+    .video-container {
+      grid-template-columns: 60% 40%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .video-container {
+      grid-template-columns: 100%;
+    }
+    
+    .playlist {
+        margin-top: 5rem;
+      max-height: calc(100vh - 200px); /* Adjusted max-height for smaller screens */
+    }
+    .playlist img {
+        width: 25%;
+        height: 3%;
+        margin-right: 10px;
+      }
+      .controls {
+        position: absolute;
+        bottom: -3em;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+  
